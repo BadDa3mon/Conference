@@ -40,7 +40,7 @@ namespace Conference
             double Pi = 0;
             for (int i = 0; i < N; i++)
             {
-                ActiveForm.Text = "Working";
+                //ActiveForm.Text = "Working";
                 int Xp = rnd.Next(0, (int)Math.Round(R + R)), Yp = rnd.Next(0, (int)Math.Round(R + R)); // получение координат точки
                 int newXp = adaptiveCoord(Xp) + X, newYp = adaptiveCoord(Yp) + Y; // адаптация координат под маленький график
                 if (Math.Pow(Xp - (int)Math.Round(R), 2) + Math.Pow(Yp - (int)Math.Round(R), 2) <= Math.Pow(R, 2)) { inE = true; }
@@ -60,7 +60,7 @@ namespace Conference
                 }
                 all++; // счётчик всех точек
             }
-            ActiveForm.Text = "Ready"; // установка названия формы
+            //ActiveForm.Text = "Ready"; // установка названия формы
         }
 
         public int adaptiveCoord(int N)
